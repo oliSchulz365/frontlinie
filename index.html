@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<title>Frontlinie</title>
+<meta name="description" content="Frontlinie – Strategie auf der Karte, Schlachten in Echtzeit.">
+<meta name="theme-color" content="#1d2a24">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Frontlinie">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" href="icons/icon-192.png">
+<style>
+  html, body { margin: 0; height: 100%; background: #1d2a24; overflow: hidden;
+    -webkit-user-select: none; user-select: none; -webkit-touch-callout: none;
+    -webkit-tap-highlight-color: transparent; overscroll-behavior: none; }
+  canvas { display: block; touch-action: none; }
+  #rotate { display: none; position: fixed; top: 0; left: 0; right: 0; padding: 10px;
+    padding-top: calc(10px + env(safe-area-inset-top)); text-align: center;
+    font: 600 15px -apple-system, system-ui, sans-serif; color: #f3e9cf; background: rgba(0,0,0,.55);
+    pointer-events: none; z-index: 2; }
+  @media (orientation: portrait) { #rotate { display: block; } }
+</style>
+</head>
+<body>
+<canvas id="game"></canvas>
+<div id="rotate">Für das beste Spielerlebnis das iPad quer halten</div>
+<script src="game.js"></script>
+<script>
+  if ('serviceWorker' in navigator && location.protocol.indexOf('http') === 0) {
+    navigator.serviceWorker.register('sw.js').catch(function () {});
+  }
+</script>
+</body>
+</html>

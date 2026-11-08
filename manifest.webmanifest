@@ -1,0 +1,17 @@
+{
+  "name": "Frontlinie",
+  "short_name": "Frontlinie",
+  "description": "Strategie auf der Karte, Schlachten in Echtzeit.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "fullscreen",
+  "orientation": "landscape",
+  "background_color": "#1d2a24",
+  "theme_color": "#1d2a24",
+  "lang": "de",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
